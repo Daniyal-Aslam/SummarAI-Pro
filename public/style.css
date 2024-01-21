@@ -1,0 +1,145 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+ 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1d1b19;
+  padding: 20px;
+  text-align: center;
+  color:#888;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #987750;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 18px;
+  max-width: 900px;
+  margin:20px  auto;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+} 
+
+h1 span{
+  color: #1d1b19;
+  height: auto;
+  background: #fff;
+  padding: 10px; 
+  display: inline-block; 
+
+}
+
+.text-box {
+  width: 400px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ffffff
+}
+
+textarea {
+  height: 300px;
+  resize: none;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  position: relative;
+  background-color: #1d1b19;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: -5px;
+}
+
+.submit-button-text {
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.submit-button:disabled{
+  position: relative;
+  background-color: #1d1b19;
+  color: #ffffff;
+  opacity: 40%;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: -5px;
+}
+
+.submit-button--loading .submit-button-text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.submit-button--loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+/* COPY BUTTON STYLES BEGIN */
+.text-box-result {
+  position:relative;
+}
+.text-box-result button{
+  cursor:pointer;
+  border:none;
+  outline:0;
+  position:absolute;
+  right:10px;
+  padding:10px;
+  background:#1d1b19;
+  color:#fff;
+  border-radius:5px;
+  bottom:10px;
+}
+/* COPY BUTTON STYLES ENDS */
+@media (max-width: 768px) {
+  body,.container{
+    padding: 10px;
+  }
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
